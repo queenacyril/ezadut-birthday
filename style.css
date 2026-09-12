@@ -3395,15 +3395,14 @@ button {
        ================================= */
 
     .page-1 {
-        position: relative;
-
-        padding: 0 20px;
-
-        display: block;
-
-        overflow: hidden;
-    }
-
+    position: relative;
+    padding: 28px 18px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
     /* little intro */
 
     .page-1 .cover-small {
@@ -3973,33 +3972,108 @@ button {
     }
 
 }
-/* FORCE MOBILE COVER VISIBLE */
+/* COVER MOBILE FIX */
+
 @media (max-width: 600px) {
+
     .page-1 {
-        opacity: 1 !important;
-        transform: none !important;
-        visibility: visible !important;
+        position: relative;
+        display: block;
+        padding: 0;
+        overflow: hidden;
     }
 
-    .page-1 .cover-small,
-    .page-1 .cover-title,
-    .page-1 .cover-date,
-    .page-1 .cover-note,
-    .page-1 .cover-boy,
-    .page-1 .cover-doodle,
-    .page-1 .cover-button,
-    .page-1 .cover-tape {
-        opacity: 1 !important;
-        visibility: visible !important;
+    .page-1 .cover-small {
+        position: absolute;
+        top: 35px;
+        left: 15px;
+        right: 15px;
+        margin: 0;
+        text-align: center;
+        font-size: 7px;
+        letter-spacing: 2px;
+        z-index: 20;
+    }
+
+    .page-1 .cover-title {
+        position: absolute;
+        top: 62px;
+        left: 10px;
+        right: 10px;
+        margin: 0;
+        text-align: center;
+        font-size: 42px;
+        line-height: .88;
+        letter-spacing: -2.5px;
+        z-index: 20;
+    }
+
+    .page-1 .cover-title span {
+    display: block;
+    font-family: "Sacramento", cursive;
+    font-size: .9em;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 3px;
+}
+    .page-1 .cover-boy {
+        position: absolute;
+        width: 145px;
+        max-height: 220px;
+        left: 50%;
+        right: auto;
+        bottom: 125px;
+        transform: translateX(-50%) rotate(4deg);
+        z-index: 10;
+        animation: coverBoyFloatMobile 4s ease-in-out infinite;
+    }
+
+    .page-1 .cover-note {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 87px;
+        margin: 0;
+        text-align: center;
+        font-size: 19px;
+        z-index: 20;
+    }
+
+    .page-1 .cover-date {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 62px;
+        margin: 0;
+        text-align: center;
+        font-size: 7px;
+        letter-spacing: 1.5px;
+        z-index: 20;
+    }
+
+    .page-1 .cover-button {
+        position: absolute;
+        left: 50%;
+        bottom: 18px;
+        transform: translateX(-50%);
+        margin: 0;
+        padding: 10px 16px;
+        font-size: 9px;
+        white-space: nowrap;
+        z-index: 30;
+    }
+
+    .page-1 .cover-button:hover {
+        transform: translateX(-50%);
     }
 }
 
-/* ===============================
-   FINAL COVER SAFETY FIX
-================================ */
+@keyframes coverBoyFloatMobile {
+    0%, 100% {
+        transform: translateX(-50%) rotate(4deg);
+    }
 
-.page-1 {
-    opacity: 1 !important;
-    transform: translateX(0) rotate(0) scale(1);
-    visibility: visible !important;
+    50% {
+        transform: translateX(-50%) translateY(-6px) rotate(2deg);
+    }
 }

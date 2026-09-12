@@ -13,33 +13,19 @@ function showPage(pageNumber) {
 
     pages.forEach(function(page) {
         page.classList.remove("active");
-
-        // reset page yang tidak aktif
-        page.style.opacity = "0";
-        page.style.transform =
-            "translateX(80px) rotate(2deg) scale(.96)";
-        page.style.pointerEvents = "none";
     });
 
-    const activePage = pages[pageNumber];
-
-    activePage.classList.add("active");
-
-    // paksa page aktif terlihat
-    activePage.style.opacity = "1";
-    activePage.style.transform =
-        "translateX(0) rotate(0) scale(1)";
-    activePage.style.pointerEvents = "auto";
+    pages[pageNumber].classList.add("active");
 
     currentPage = pageNumber;
 
-    if (pageNumber === 2) {
-        document.querySelectorAll(".love-note").forEach(function(note, index) {
-            note.style.animationDelay = (index * 0.08) + "s";
-        });
-    }
+if (pageNumber === 2) {
+    document.querySelectorAll(".love-note").forEach(function(note, index) {
+        note.style.animationDelay = (index * 0.08) + "s";
+    });
+}
 
-    updatePageNumber();
+updatePageNumber();
 }
 
 function nextPage() {
