@@ -3973,3 +3973,23 @@ button {
     }
 
 }
+/* FORCE MOBILE COVER VISIBLE */
+@media (max-width: 600px) {
+    .page-1 {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
+
+    .page-1 .cover-small,
+    .page-1 .cover-title,
+    .page-1 .cover-date,
+    .page-1 .cover-note,
+    .page-1 .cover-boy,
+    .page-1 .cover-doodle,
+    .page-1 .cover-button,
+    .page-1 .cover-tape {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
