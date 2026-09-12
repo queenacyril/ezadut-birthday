@@ -3328,3 +3328,648 @@ button {
     }
 
 }
+
+/* =========================================
+   FINAL MOBILE FIX — ALL PAGES
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    /* =========================
+       GENERAL
+       ========================= */
+
+    body {
+        overflow: hidden;
+    }
+
+    .book {
+        width: 94vw;
+        height: 80dvh;
+    }
+
+    .page {
+        padding: 28px 18px 70px;
+    }
+
+    /* =========================
+       NAVIGATION
+       ========================= */
+
+    .navigation {
+        position: fixed;
+        left: 50%;
+        bottom: 10px;
+        transform: translateX(-50%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+        width: max-content;
+
+        z-index: 9999;
+    }
+
+    .navigation button {
+        width: 38px;
+        height: 38px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+    }
+
+    .navigation span {
+        white-space: nowrap;
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+
+    /* =================================
+       PAGE 1 — COVER
+       ================================= */
+
+    .page-1 {
+        position: relative;
+
+        padding: 0 20px;
+
+        display: block;
+
+        overflow: hidden;
+    }
+
+    /* little intro */
+
+    .page-1 .cover-small {
+        position: absolute;
+
+        top: 42px;
+        left: 20px;
+        right: 20px;
+
+        margin: 0;
+
+        text-align: center;
+
+        font-size: 8px;
+        letter-spacing: 2px;
+
+        z-index: 20;
+    }
+
+    /* TITLE */
+
+    .page-1 .cover-title {
+        position: absolute;
+
+        top: 72px;
+        left: 15px;
+        right: 15px;
+
+        margin: 0;
+
+        text-align: center;
+
+        font-size: 48px;
+        line-height: .88;
+        letter-spacing: -3px;
+
+        z-index: 20;
+    }
+
+    .page-1 .cover-title span {
+        font-size: .70em;
+    }
+
+    /* FOTO COWO
+       sekarang sengaja DI BAWAH TITLE */
+
+    .page-1 .cover-boy {
+        position: absolute;
+
+        width: 165px;
+        max-height: 245px;
+
+        left: 50%;
+        right: auto;
+
+        bottom: 90px;
+
+        transform: translateX(-50%) rotate(4deg);
+
+        z-index: 10;
+    }
+
+    /* date */
+
+    .page-1 .cover-date {
+        position: absolute;
+
+        left: 20px;
+        right: 20px;
+
+        bottom: 65px;
+
+        margin: 0;
+
+        text-align: center;
+
+        font-size: 8px;
+        letter-spacing: 2px;
+
+        z-index: 20;
+    }
+
+    /* handwritten text */
+
+    .page-1 .cover-note {
+        position: absolute;
+
+        left: 20px;
+        right: 20px;
+
+        bottom: 105px;
+
+        margin: 0;
+
+        text-align: center;
+
+        font-size: 21px;
+
+        z-index: 20;
+    }
+
+    /* OPEN BUTTON */
+
+    .page-1 .cover-button {
+        position: absolute;
+
+        left: 50%;
+        bottom: 18px;
+
+        transform: translateX(-50%);
+
+        margin: 0;
+
+        padding: 11px 17px;
+
+        font-size: 10px;
+
+        white-space: nowrap;
+
+        z-index: 30;
+    }
+
+    .page-1 .cover-button:hover {
+        transform: translateX(-50%);
+    }
+
+    /* doodles */
+
+    .page-1 .doodle-star {
+        top: 125px;
+        right: 13%;
+
+        font-size: 18px;
+    }
+
+    .page-1 .doodle-heart {
+        left: 12%;
+        bottom: 145px;
+
+        font-size: 21px;
+    }
+
+    .page-1 .doodle-sparkle {
+        left: 8%;
+        top: 32%;
+
+        font-size: 16px;
+    }
+
+    .page-1 .cover-tape {
+        width: 85px;
+        height: 20px;
+
+        top: 20px;
+        right: 25px;
+    }
+
+
+    /* =================================
+       PAGE 2 — TIMELINE
+       ================================= */
+
+    .page-2 {
+        padding: 28px 18px 70px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .page-2 .page-label {
+        font-size: 8px;
+        margin-bottom: 8px;
+    }
+
+    .page-2 h2 {
+        font-size: 32px;
+        line-height: .95;
+
+        margin-bottom: 18px;
+    }
+
+    .page-2 .timeline {
+        width: 94%;
+
+        max-height: 46dvh;
+
+        padding-left: 27px;
+        padding-right: 5px;
+
+        margin: 0 auto;
+
+        overflow-y: auto;
+    }
+
+    .page-2 .timeline-item {
+        padding: 13px 14px;
+        margin-bottom: 15px;
+    }
+
+    .page-2 .timeline-item::before {
+        left: -30px;
+        top: 19px;
+
+        width: 10px;
+        height: 10px;
+    }
+
+    .page-2 .timeline-date {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .page-2 .timeline-item h3 {
+        font-size: 16px;
+    }
+
+    .page-2 .timeline-item p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .page-2 .timeline-heart {
+        position: relative;
+
+        right: auto;
+        bottom: auto;
+
+        margin: 10px auto 0;
+        text-align: center;
+    }
+
+    .page-2 .handwriting {
+        text-align: center;
+        font-size: 21px;
+
+        margin-top: 8px;
+    }
+
+
+    /* =================================
+       PAGE 3 — 100 REASONS
+       ================================= */
+
+    .page-3 {
+        padding: 27px 16px 70px;
+
+        overflow: hidden;
+    }
+
+    .page-3 .page-label {
+        font-size: 8px;
+        margin-bottom: 7px;
+    }
+
+    .page-3 h2 {
+        font-size: 32px;
+        line-height: .92;
+
+        margin-bottom: 8px;
+    }
+
+    .page-3 .intro-love {
+        font-size: 10px;
+        line-height: 1.5;
+
+        margin-bottom: 10px;
+    }
+
+    .page-3 .love-grid {
+        width: 96%;
+
+        height: 48dvh;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 7px;
+
+        padding: 7px 8px 15px 4px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .page-3 .love-note {
+        min-height: 58px;
+
+        padding: 10px 8px 10px 31px;
+
+        font-size: 9px;
+        line-height: 1.35;
+    }
+
+    .page-3 .love-note span {
+        left: 8px;
+        top: 9px;
+
+        font-size: 12px;
+    }
+
+    .page-3 .handwriting {
+        margin-top: 7px;
+
+        font-size: 13px;
+        text-align: center;
+    }
+
+
+    /* =================================
+       PAGE 4 — LETTER
+       ================================= */
+
+    .page-4 {
+        padding: 22px 14px 70px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .page-4 .page-label {
+        text-align: center;
+
+        font-size: 8px;
+        margin-bottom: 8px;
+    }
+
+    /* CALENDAR */
+
+    .page-4 .mini-calendar {
+        width: 96%;
+
+        padding: 11px 10px;
+
+        margin: 0 auto 14px;
+    }
+
+    .page-4 .calendar-header {
+        margin-bottom: 6px;
+    }
+
+    .page-4 .calendar-header span {
+        font-size: 19px;
+    }
+
+    .page-4 .calendar-header strong {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .page-4 .calendar-weekdays {
+        margin-bottom: 2px;
+    }
+
+    .page-4 .calendar-weekdays span {
+        font-size: 6px;
+        letter-spacing: .5px;
+    }
+
+    .page-4 .calendar-grid {
+        row-gap: 1px;
+    }
+
+    .page-4 .calendar-grid > div {
+        min-height: 21px;
+        font-size: 8px;
+    }
+
+    .page-4 .birthday-date > span {
+        width: 21px;
+        height: 21px;
+    }
+
+    .page-4 .birthday-date img {
+        width: 47px;
+
+        right: -19px;
+        top: -32px;
+    }
+
+    .page-4 .mini-calendar > p {
+        margin-top: 9px;
+        font-size: 17px;
+    }
+
+    /* LETTER TITLE */
+
+    .page-4 h2 {
+        font-size: 31px;
+        line-height: .95;
+
+        margin: 4px 0 13px;
+
+        text-align: center;
+    }
+
+    /* LETTER PAPER */
+
+    .page-4 .birthday-letter {
+        width: 96%;
+
+        height: 54dvh;
+        min-height: 0;
+
+        margin: 0 auto 25px;
+
+        padding: 19px 16px;
+
+        font-size: 10.5px;
+        line-height: 1.7;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .page-4 .birthday-letter p {
+        margin-bottom: 17px;
+    }
+
+    .page-4 .birthday-letter::-webkit-scrollbar {
+        width: 3px;
+    }
+
+
+    /* =================================
+       PAGE 5 — CAKE
+       ================================= */
+
+    .page-5 {
+        padding: 22px 15px 70px;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .page-5 .cake-scene {
+        min-height: 100%;
+
+        height: auto;
+
+        padding-top: 5px;
+        padding-bottom: 25px;
+
+        overflow: visible;
+    }
+
+    .page-5 .cake-label {
+        position: relative;
+
+        top: auto;
+
+        margin-bottom: 6px;
+
+        font-size: 8px;
+    }
+
+    .page-5 .cake-scene h2 {
+        font-size: 32px;
+
+        line-height: .92;
+
+        margin: 0 0 5px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .page-5 .cake-wrapper {
+        width: 270px;
+        height: 190px;
+
+        transform: scale(.72);
+        transform-origin: top center;
+
+        margin-bottom: -35px;
+
+        flex-shrink: 0;
+    }
+
+    .page-5 .cake-message {
+        margin-top: 0;
+
+        padding: 0 10px;
+
+        font-size: 21px;
+        line-height: 1.2;
+
+        text-align: center;
+    }
+
+    .page-5 .wish-button {
+        display: block;
+
+        margin: 9px auto 0;
+
+        padding: 10px 17px;
+
+        font-size: 10px;
+    }
+
+
+    /* =================================
+       PAGE 6 — FINAL
+       ================================= */
+
+    .page-6 {
+        padding: 30px 20px 75px;
+
+        text-align: center;
+
+        overflow: hidden;
+    }
+
+    .page-6 .big-heart {
+        font-size: 50px;
+
+        margin-bottom: 5px;
+    }
+
+    .page-6 .page-label {
+        font-size: 8px;
+        margin-bottom: 8px;
+    }
+
+    .page-6 h2 {
+        font-size: 32px;
+
+        line-height: .95;
+
+        margin-bottom: 15px;
+    }
+
+    .page-6 h2 span {
+        font-size: .75em;
+        line-height: 1.05;
+    }
+
+    .page-6 .final-message {
+        max-width: 280px;
+
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .page-6 .handwriting.big {
+        font-size: 31px;
+
+        margin-top: 15px;
+    }
+
+    .page-6 button {
+        margin-top: 13px;
+
+        padding: 10px 17px;
+
+        border-radius: 50px;
+
+        background: #19364d;
+        color: white;
+
+        font-size: 10px;
+    }
+
+}
